@@ -11,11 +11,5 @@
       "src": "/(.*)",
       "dest": "dist/index.js"
     }
-  ],
-  "env": {
-    "DATABASE_URL": "@database_url",
-    "DIRECT_URL": "@direct_url",
-    "GROQ_API_KEY": "@groq_api_key",
-    "JWT_SECRET": "@jwt_secret"
-  }
+  ]
 }
