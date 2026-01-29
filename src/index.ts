@@ -10,7 +10,10 @@ dotenv.config();
 
 const app: Express = express();
 const port = process.env.PORT || 3001;
-const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:3000';
+// Limpiar URL del frontend: remover trailing slashes
+const frontendUrl = (process.env.FRONTEND_URL || 'http://localhost:3000').replace(/\/$/, '');
+
+console.log(`CORS Origin: ${frontendUrl}`);
 
 // CORS configuration
 app.use(cors({
